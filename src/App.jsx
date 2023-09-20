@@ -8,6 +8,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
+        <Footer />
       </div>
       </Router>
   ); 
