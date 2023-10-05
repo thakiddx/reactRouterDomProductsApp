@@ -1,5 +1,4 @@
 import React from "react";
-import <p></p> from 'react-router-dom';
 
 function Footer() {
     return (

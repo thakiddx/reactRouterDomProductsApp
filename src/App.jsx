@@ -1,17 +1,30 @@
-import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './components/Navbar'
+import React from 'react';
+import Footer from './components/Footer';
+import About from './pages/About';
+import Home from './pages/Home';
+import Products from './pages/ProductsList';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
-
   return (
     <Router>
       <div>
         <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/products"
+            element={<Products products={products} setProducts={setProducts} />}
+          />
+          <Route path="/products/:id" element={<Product />} />
+        </Routes>
         <Footer />
       </div>
-      </Router>
-  ); 
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
